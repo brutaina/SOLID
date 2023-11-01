@@ -12,6 +12,8 @@ public class Shape {
     }
 
     public void draw() {
+
+
         if (type.equals("circle")) {
             drawCircle();
         } else if (type.equals("rectangle")) {
