@@ -6,17 +6,17 @@
  * depende de uma classe de baixo nível (LightBulb).
  */
 public class LightSwitch {
-    private LightBulb lightBulb;
+    private Switchable device;
 
-    public LightSwitch() {
-        this.lightBulb = new LightBulb();
+    public LightSwitch(Switchable device) {
+        this.device = device;
     }
 
     public void press() {
-        if (lightBulb.isOn()) {
-            lightBulb.turnOff();
+        if (device.isOn()) {
+            device.turnOff();
         } else {
-            lightBulb.turnOn();
+            device.turnOn();
         }
     }
 }
