@@ -8,16 +8,15 @@ pois o comportamento esperado de um retângulo é diferente do comportamento esp
 Por exemplo, se tentarmos definir a largura e a altura de um objeto Square de forma independente, 
 o resultado será inconsistente.
 */ 
-public class Square extends Rectangle {
-    @Override
-    public void setWidth(int width) {
-        this.width = width;
-        this.height = width;
+public class Square implements Shape {
+    protected int sideLength;
+
+    public void setSideLength(int sideLength) {
+        this.sideLength = sideLength;
     }
 
     @Override
-    public void setHeight(int height) {
-        this.width = height;
-        this.height = height;
+    public int calculateArea() {
+        return sideLength * sideLength;
     }
 }

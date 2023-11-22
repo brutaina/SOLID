@@ -8,7 +8,7 @@ pois o comportamento esperado de um retângulo é diferente do comportamento esp
 Por exemplo, se tentarmos definir a largura e a altura de um objeto Square de forma independente, 
 o resultado será inconsistente.
 */ 
-public class Rectangle {
+public class Rectangle implements Shape {
     protected int width;
     protected int height;
 
@@ -20,6 +20,7 @@ public class Rectangle {
         this.height = height;
     }
 
+    @Override
     public int calculateArea() {
         return width * height;
     }
